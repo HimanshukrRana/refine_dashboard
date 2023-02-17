@@ -4,9 +4,9 @@ const getAllUsers = async (req, res) => {
   try {
     const users = await User.find({}).limit(req.query._end);
 
-    req.status(200).json({ users });
+    res.status(200).json(users);
   } catch (error) {
-    req.status(500).json({ message: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 
@@ -34,7 +34,7 @@ const getUserInfoByID = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const user = await User.findOne({ _id: id }).populate("allproperties");
+    const user = await User.findOne({ _id: id }).populate("allProperties");
 
     if (user) {
       res.status(200).json(user);
