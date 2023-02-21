@@ -3,7 +3,7 @@ import { useLogin } from "@pankod/refine-core";
 import { Container, Box } from "@pankod/refine-mui";
 import { CredentialResponse } from "interfaces/google";
 
-import yariga from "../assets/yariga.svg";
+import yariga from "../assets/databox-dark.svg";
 
 export const Login: React.FC = () => {
   const { mutate: login } = useLogin<CredentialResponse>();

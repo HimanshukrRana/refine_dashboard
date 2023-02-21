@@ -45,7 +45,7 @@ const PropertyDetails = () => {
     if (response) {
       mutate(
         {
-          resource: "api/v1/properties",
+          resource: "properties",
           id: id as string,
         },
         {
@@ -259,10 +259,10 @@ const PropertyDetails = () => {
           <Stack>
             <img
               src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
-              alt="map"
               width="100%"
               height={306}
               style={{ borderRadius: 10, objectFit: "cover" }}
+              alt="Google Maps"
             />
           </Stack>
 
